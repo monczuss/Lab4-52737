@@ -21,8 +21,8 @@ fi
 
 if [[ $1 == "--help" || $1 == "-h" ]]; then
     echo "Dostępne opcje:"
-    echo "--date        Wyświetla dzisiejszą datę"
-    echo "--logs        Tworzy 100 plików logx.txt"
-    echo "--logs [n]    Tworzy n plików logx.txt"
-    echo "--help        Wyświetla tę pomoc"
+    echo "--date, -d        Wyświetla dzisiejszą datę"
+    echo "--logs, -l        Tworzy 100 plików logx.txt"
+    echo "--logs [n], -l [n]    Tworzy n plików logx.txt"
+    echo "--help , -h       Wyświetla tę pomoc"
 fi
