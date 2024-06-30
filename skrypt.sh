@@ -31,3 +31,19 @@ if [[ $1 == "--init" ]]; then
     git clone https://github.com/monczuss/Lab4-52737
     export PATH=$PATH:$(pwd)/Lab4-52737
 fi
+
+if [[ ($1 == "--error" || $1 == "-e") && -z $2 ]]; then
+    for i in $(seq 1 100); do
+        filename="error${i}.txt"
+        echo "Nazwa pliku: $filename" > $filename
+        echo "Nazwa skryptu: skrypt.sh" >> $filename
+        echo "Data utworzenia: $(date)" >> $filename
+    done
+elif [[ ($1 == "--error" || $1 == "-e") && $2 =~ ^[0-9]+$ ]]; then
+    for i in $(seq 1 $2); do
+        filename="error${i}.txt"
+        echo "Nazwa pliku: $filename" > $filename
+        echo "Nazwa skryptu: skrypt.sh" >> $filename
+        echo "Data utworzenia: $(date)" >> $filename
+    done
+fi
