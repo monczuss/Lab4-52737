@@ -18,3 +18,11 @@ elif [[ $1 == "--logs" && $2 =~ ^[0-9]+$ ]]; then
         echo "Data utworzenia: $(date)" >> $filename
     done
 fi
+
+if [[ $1 == "--help" ]]; then
+    echo "Dostępne opcje:"
+    echo "--date        Wyświetla dzisiejszą datę"
+    echo "--logs        Tworzy 100 plików logx.txt"
+    echo "--logs [n]    Tworzy n plików logx.txt"
+    echo "--help        Wyświetla tę pomoc"
+fi
