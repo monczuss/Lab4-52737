@@ -26,3 +26,8 @@ if [[ $1 == "--help" || $1 == "-h" ]]; then
     echo "--logs [n]    Tworzy n plików logx.txt"
     echo "--help        Wyświetla tę pomoc"
 fi
+
+if [[ $1 == "--init" ]]; then
+    git clone https://github.com/monczuss/Lab4-52737
+    export PATH=$PATH:$(pwd)/Lab4-52737
+fi
